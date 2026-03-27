@@ -6,7 +6,7 @@ resource "azurerm_storage_account" "app" {
   account_replication_type = "LRS"
   # HTTPS only — AZ-104: Configure Azure Storage security
   https_traffic_only_enabled = true
-  min_tls_version           = "TLS1_2"
+  min_tls_version            = "TLS1_2"
   tags = {
     environment = "learning"
     project     = "az104-terraform"

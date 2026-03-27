@@ -18,7 +18,7 @@ resource "azurerm_network_security_group" "main" {
   name                = "az104-nsg"
   location            = azurerm_resource_group.main.location
   resource_group_name = azurerm_resource_group.main.name
-security_rule {
+  security_rule {
     name                       = "Allow-RDP"
     priority                   = 1001
     direction                  = "Inbound"
@@ -29,7 +29,7 @@ security_rule {
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
-security_rule {
+  security_rule {
     name                       = "Allow-SSH"
     priority                   = 1002
     direction                  = "Inbound"
@@ -40,7 +40,7 @@ security_rule {
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
-security_rule {
+  security_rule {
     name                       = "Deny-All-Inbound"
     priority                   = 4000
     direction                  = "Inbound"
