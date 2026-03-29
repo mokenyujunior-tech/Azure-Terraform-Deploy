@@ -11,7 +11,7 @@ resource "azurerm_monitor_action_group" "email_alert" {
   short_name          = "emailalert"
   email_receiver {
     name          = "Admin's Email"
-    email_address = "hojohn8225@gmail.com"
+    email_address = "hjohn8225@gmail.com"
   }
 }
 resource "azurerm_monitor_metric_alert" "cpu_alert" {
